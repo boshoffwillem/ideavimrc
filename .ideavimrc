@@ -22,23 +22,47 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 let mapleader = " "
+set ideajoin
+set idearefactormode=keep
 
-nnoremap <leader>fa :action GotoAction<CR>
-nnoremap <leader>fb :action Switcher<CR>
+nnoremap \e :e ~/code/ideavimrc/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+" File actions
+nnoremap <leader>x :action GotoAction<CR>
+nnoremap <leader>b :action Switcher<CR>
 nnoremap <leader>ff :action GotoFile<CR>
-nnoremap <leader>wh :action SplitHorizontally<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+
+" Window actions
+nnoremap <leader>w2 :action SplitHorizontally<CR>
+nnoremap <leader>w3 :action SplitVertically<CR>
+nnoremap <leader>wo :action NextSplitter<CR>
+nnoremap <leader>w0 :action CloseContent<CR>
 nnoremap <leader>wm :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <leader>wp :action JumpToLastWindow<CR>
-nnoremap <Leader>wq :action CloseContent<CR>
-nnoremap <Leader>wa :action CloseAllEditors<CR>
-nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <Leader>wq :action CloseAllEditors<CR>
 nnoremap <leader>wt :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>wu :action Unsplit<CR>
 nnoremap <leader>wx :action HideAllWindows<CR>
 nnoremap <leader>wz :action ToggleDistractionFreeMode<CR>
 
-set ideajoin
-set idearefactormode=keep
+" Language actions
+nnoremap <leader>lbt :action ToggleLineBreakpoint<CR>
+nnoremap <leader>lcl :action CommentByLineComment<CR>
+nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>lr=  :action ReformatCode<CR>
+nnoremap <leader>ld :action GotoDeclaration<CR>
+nnoremap <leader>lpd :action QuickDeclaration<CR>
+nnoremap <leader>li :action GotoImplementation<CR>
+nnoremap <leader>lpi :action QuickImplementation<CR>
+nnoremap <leader>lu :action FindUsages<CR>
+nnoremap <leader>lpu :action QuickUsages<CR>
+nnoremap <leader>l- :action Back<CR>
+nnoremap <leader>l= :action Forward<CR>
+nnoremap <leader>ll :action RecentLocations<CR>
+
+" Text actions
 vnoremap < <gv
 vnoremap > >gv
 nnoremap [[ :action MethodUp<CR>
@@ -47,10 +71,3 @@ nnoremap <leader>- :action CollapseRegion<CR>
 nnoremap <leader>= :action ExpandRegion<CR>
 nnoremap <leader>z- :action CollapseAllRegions<CR>
 nnoremap <leader>z= :action ExpandAllRegions<CR>
-nnoremap <leader>c :action CommentByLineComment<CR>
-nnoremap <leader>rp :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>r=  :action ReformatCode<CR>
-
-nnoremap <leader>ld :action GotoDeclaration<CR>
-nnoremap <leader>li :action GotoImplementation<CR>
-nnoremap <leader>lu :action FindUsages<CR>
