@@ -35,13 +35,6 @@ nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 
 " Window actions
-nnoremap <leader>w2 :action SplitHorizontally<CR>
-nnoremap <leader>w3 :action SplitVertically<CR>
-nnoremap <leader>wo :action NextSplitter<CR>
-nnoremap <leader>w0 :action CloseContent<CR>
-nnoremap <leader>wm :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <leader>wp :action JumpToLastWindow<CR>
-nnoremap <Leader>wq :action CloseAllEditors<CR>
 nnoremap <leader>wt :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>wu :action Unsplit<CR>
 nnoremap <leader>wx :action HideAllWindows<CR>
