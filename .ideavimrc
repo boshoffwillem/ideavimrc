@@ -7,6 +7,7 @@ set relativenumber
 set nu
 set nohlsearch
 set hidden
+set visualbell
 set noerrorbells
 set nowrap
 set noswapfile
@@ -17,6 +18,7 @@ set incsearch
 set scrolloff=8
 set signcolumn=yes
 set colorcolumn=80
+set clipboard^=unnamed,unnamedplus
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -24,6 +26,7 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap Y yg$
 
 let mapleader = " "
 set ideajoin
@@ -33,21 +36,21 @@ nnoremap \e :e ~/code/ideavimrc/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " File actions
-nnoremap <leader>x :action GotoAction<CR>
+nnoremap <A-x> :action GotoAction<CR>
 nnoremap <leader>b :action Switcher<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 
 " Window actions
-nnoremap <leader>ws :action SplitHorizontally<CR>
-nnoremap <leader>wv :action SplitVertically<CR>
-nnoremap <leader>wq :action CloseEditor<CR>
-nnoremap <leader>wl :action NextSplitter<CR>
-nnoremap <leader>wh :action PreviousSplitter<CR>
-nnoremap <leader>wt :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>wu :action Unsplit<CR>
-nnoremap <leader>wx :action HideAllWindows<CR>
-nnoremap <leader>wz :action ToggleDistractionFreeMode<CR>
+nnoremap <C-w>s :action SplitHorizontally<CR>
+nnoremap <C-w>v :action SplitVertically<CR>
+nnoremap <C-w>q :action CloseEditor<CR>
+nnoremap <C-w>l :action NextSplitter<CR>
+nnoremap <C-w>h :action PreviousSplitter<CR>
+nnoremap <C-w>t :action ActivateTerminalToolWindow<CR>
+nnoremap <C-w>u :action Unsplit<CR>
+nnoremap <C-w>x :action HideAllWindows<CR>
+nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 
 " Language actions
 nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
@@ -63,8 +66,12 @@ nnoremap <leader>lpu :action QuickUsages<CR>
 nnoremap <leader>l- :action Back<CR>
 nnoremap <leader>l= :action Forward<CR>
 nnoremap <leader>ll :action RecentLocations<CR>
-nnoremap <leader>ltr :action RiderUnitTestRunContextAction<CR>
+nnoremap <leader>lq :action QuickJavaDoc<CR>
 nnoremap <leader><return> :action ShowIntentionActions<CR>
+
+" Unit test actions
+nnoremap <leader>tr :action RiderUnitTestRunContextAction<CR>
+nnoremap <leader>td :action RiderUnitTestDebugContextAction<CR>
 
 " Text actions
 vnoremap < <gv
@@ -75,3 +82,6 @@ nnoremap <leader>- :action CollapseRegion<CR>
 nnoremap <leader>= :action ExpandRegion<CR>
 nnoremap <leader>z- :action CollapseAllRegions<CR>
 nnoremap <leader>z= :action ExpandAllRegions<CR>
+
+" Search actions
+nnoremap <leader>sf :action FindInPath<CR>
