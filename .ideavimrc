@@ -52,11 +52,7 @@ nnoremap <C-w>u :action Unsplit<CR>
 nnoremap <C-w>x :action HideAllWindows<CR>
 nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 
-" Language actions
-nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
-nnoremap <leader>l/ :action CommentByLineComment<CR>
-nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>lr=  :action ReformatCode<CR>
+" LSP navigation commands
 nnoremap <leader>ld :action GotoDeclaration<CR>
 nnoremap <leader>lpd :action QuickDeclaration<CR>
 nnoremap <leader>li :action GotoImplementation<CR>
@@ -65,11 +61,21 @@ nnoremap <leader>lu :action FindUsages<CR>
 nnoremap <leader>lpu :action QuickUsages<CR>
 nnoremap <leader>l- :action Back<CR>
 nnoremap <leader>l= :action Forward<CR>
-nnoremap <leader>ll :action RecentLocations<CR>
-nnoremap <leader>lq :action QuickJavaDoc<CR>
-nnoremap <leader><return> :action ShowIntentionActions<CR>
+nnoremap <leader>lf :action FindInPath<CR>
 
-" Unit test actions
+" LSP action commands
+nnoremap <C-Space> :action CodeCompletion<CR>
+nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
+nnoremap <C-/> :action CommentByLineComment<CR>
+vnoremap <C-/> :action CommentByLineComment<CR>
+nnoremap <A-/> :action CommentByBlockComment<CR>
+vnoremap <A-/> :action CommentByBlockComment<CR>
+nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
+nnoremap <C-A-\>  :action ReformatCode<CR>
+nnoremap <leader>lh :action QuickJavaDoc<CR>
+nnoremap <leader>la :action ShowIntentionActions<CR>
+
+" Unit test commands
 nnoremap <leader>tr :action RiderUnitTestRunContextAction<CR>
 nnoremap <leader>td :action RiderUnitTestDebugContextAction<CR>
 
