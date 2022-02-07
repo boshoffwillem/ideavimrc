@@ -37,20 +37,30 @@ nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " File actions
 nnoremap <A-x> :action GotoAction<CR>
+inoremap <A-x> :action GotoAction<CR>
 nnoremap <leader>b :action Switcher<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 
 " Window actions
 nnoremap <C-w>s :action SplitHorizontally<CR>
+inoremap <C-w>s :action SplitHorizontally<CR>
 nnoremap <C-w>v :action SplitVertically<CR>
+inoremap <C-w>v :action SplitVertically<CR>
 nnoremap <C-w>q :action CloseEditor<CR>
+inoremap <C-w>q :action CloseEditor<CR>
 nnoremap <C-w>l :action NextSplitter<CR>
+inoremap <C-w>l :action NextSplitter<CR>
 nnoremap <C-w>h :action PreviousSplitter<CR>
+inoremap <C-w>h :action PreviousSplitter<CR>
 nnoremap <C-w>t :action ActivateTerminalToolWindow<CR>
+inoremap <C-w>t :action ActivateTerminalToolWindow<CR>
 nnoremap <C-w>u :action Unsplit<CR>
+inoremap <C-w>u :action Unsplit<CR>
 nnoremap <C-w>x :action HideAllWindows<CR>
+inoremap <C-w>x :action HideAllWindows<CR>
 nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
+inoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 
 " LSP navigation commands
 nnoremap <leader>ld :action GotoDeclaration<CR>
@@ -65,13 +75,18 @@ nnoremap <leader>lf :action FindInPath<CR>
 
 " LSP action commands
 nnoremap <C-Space> :action CodeCompletion<CR>
+inoremap <C-Space> :action CodeCompletion<CR>
 nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
 nnoremap <C-/> :action CommentByLineComment<CR>
+inoremap <C-/> :action CommentByLineComment<CR>
 vnoremap <C-/> :action CommentByLineComment<CR>
 nnoremap <A-/> :action CommentByBlockComment<CR>
+inoremap <A-/> :action CommentByBlockComment<CR>
 vnoremap <A-/> :action CommentByBlockComment<CR>
 nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
 nnoremap <C-A-\>  :action ReformatCode<CR>
+inoremap <C-A-\>  :action ReformatCode<CR>
+vnoremap <C-A-\>  :action ReformatCode<CR>
 nnoremap <leader>lh :action QuickJavaDoc<CR>
 nnoremap <leader>la :action ShowIntentionActions<CR>
 
