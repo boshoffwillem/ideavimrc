@@ -22,10 +22,10 @@ set clipboard^=unnamed,unnamedplus
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-j> :m .+1<CR>==
+vnoremap <A-k> :m .-2<CR>==
+vnoremap < <gv
+vnoremap > >gv
 nnoremap Y yg$
 
 let mapleader = " "
@@ -37,68 +37,51 @@ nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 " File actions
 nnoremap <A-x> :action GotoAction<CR>
-inoremap <A-x> <Esc>:action GotoAction<CR>
-nnoremap <leader>b :action Switcher<CR>
+nnoremap <leader>bb :action Switcher<CR>
+nnoremap <leader>bk :action CloseEditor<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fw :action FindInPath<CR>
 
 " Window actions
 nnoremap <C-w>s :action SplitHorizontally<CR>
-inoremap <C-w>s :action SplitHorizontally<CR>
 nnoremap <C-w>v :action SplitVertically<CR>
-inoremap <C-w>v :action SplitVertically<CR>
 nnoremap <C-w>q :action CloseEditor<CR>
-inoremap <C-w>q :action CloseEditor<CR>
 nnoremap <C-w>l :action NextSplitter<CR>
-inoremap <C-w>l :action NextSplitter<CR>
 nnoremap <C-w>h :action PreviousSplitter<CR>
-inoremap <C-w>h :action PreviousSplitter<CR>
 nnoremap <C-w>t :action ActivateTerminalToolWindow<CR>
-inoremap <C-w>t :action ActivateTerminalToolWindow<CR>
 nnoremap <C-w>u :action Unsplit<CR>
-inoremap <C-w>u :action Unsplit<CR>
 nnoremap <C-w>x :action HideAllWindows<CR>
-inoremap <C-w>x :action HideAllWindows<CR>
 nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
-inoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 
 " LSP navigation commands
-nnoremap <leader>ld :action GotoDeclaration<CR>
-nnoremap <leader>lpd :action QuickDeclaration<CR>
-nnoremap <leader>li :action GotoImplementation<CR>
-nnoremap <leader>lpi :action QuickImplementation<CR>
-nnoremap <leader>lu :action FindUsages<CR>
-nnoremap <leader>lpu :action QuickUsages<CR>
+nnoremap <leader>lgd :action GotoDeclaration<CR>
+nnoremap <leader>lgi :action GotoImplementation<CR>
+nnoremap <leader>lgr :action FindUsages<CR>
 nnoremap <leader>l- :action Back<CR>
 nnoremap <leader>l= :action Forward<CR>
 nnoremap <leader>lf :action FindInPath<CR>
 
 " LSP action commands
 nnoremap <C-Space> :action CodeCompletion<CR>
-inoremap <C-Space> <Esc>:action CodeCompletion<CR>
 nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
-nnoremap <C-/> :action CommentByLineComment<CR>
-inoremap <C-/> <Esc>:action CommentByLineComment<CR>
-vnoremap <C-/> :action CommentByLineComment<CR>
-nnoremap <A-/> :action CommentByBlockComment<CR>
-inoremap <A-/> <Esc>:action CommentByBlockComment<CR>
-vnoremap <A-/> :action CommentByBlockComment<CR>
+nnoremap gcc :action CommentByLineComment<CR>
+vnoremap gcc :action CommentByLineComment<CR>
+nnoremap gcb :action CommentByBlockComment<CR>
+vnoremap gcb :action CommentByBlockComment<CR>
 nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
-nnoremap <C-A-\>  :action ReformatCode<CR>
-inoremap <C-A-\> <Esc>:action ReformatCode<CR>
-vnoremap <C-A-\>  :action ReformatCode<CR>
+nnoremap <leader>rf  :action ReformatCode<CR>
+vnoremap <leader>rf  :action ReformatCode<CR>
 nnoremap <leader>lh :action QuickJavaDoc<CR>
 nnoremap <leader>la :action ShowIntentionActions<CR>
+nnoremap <leader>lsw :action GotoSymbol<CR>
 
 " Unit test commands
+nnoremap <leader>tt :action ActivateUnitTestsToolWindow<CR>
 nnoremap <leader>tr :action RiderUnitTestRunContextAction<CR>
 nnoremap <leader>td :action RiderUnitTestDebugContextAction<CR>
 
 " Text actions
-vnoremap < <gv
-vnoremap > >gv
-nnoremap [[ :action MethodUp<CR>
-nnoremap ]] :action MethodDown<CR>
 nnoremap <leader>- :action CollapseRegion<CR>
 nnoremap <leader>= :action ExpandRegion<CR>
 nnoremap <leader>z- :action CollapseAllRegions<CR>
