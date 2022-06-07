@@ -55,9 +55,9 @@ nnoremap <C-w>x :action HideAllWindows<CR>
 nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 
 " LSP navigation commands
-nnoremap <leader>lgd :action GotoDeclaration<CR>
-nnoremap <leader>lgi :action GotoImplementation<CR>
-nnoremap <leader>lgr :action FindUsages<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action FindUsages<CR>
 nnoremap <leader>l- :action Back<CR>
 nnoremap <leader>l= :action Forward<CR>
 nnoremap <leader>lf :action FindInPath<CR>
