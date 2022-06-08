@@ -82,7 +82,7 @@ nnoremap <leader>tr :action RiderUnitTestRunContextAction<CR>
 nnoremap <leader>td :action RiderUnitTestDebugContextAction<CR>
 
 " Text actions
-nnoremap <leader>- :action CollapseRegion<CR>
-nnoremap <leader>= :action ExpandRegion<CR>
-nnoremap <leader>z- :action CollapseAllRegions<CR>
-nnoremap <leader>z= :action ExpandAllRegions<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap zM :action CollapseAllRegions<CR>
+nnoremap zR :action ExpandAllRegions<CR>
