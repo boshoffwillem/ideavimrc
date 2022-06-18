@@ -58,9 +58,8 @@ nnoremap <C-w>z :action ToggleDistractionFreeMode<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gr :action FindUsages<CR>
-nnoremap <leader>l- :action Back<CR>
-nnoremap <leader>l= :action Forward<CR>
-nnoremap <leader>lf :action FindInPath<CR>
+nnoremap <C>i :action Back<CR>
+nnoremap <C>o :action Forward<CR>
 
 " LSP action commands
 nnoremap <C-Space> :action CodeCompletion<CR>
@@ -70,11 +69,11 @@ vnoremap gcc :action CommentByLineComment<CR>
 nnoremap gcb :action CommentByBlockComment<CR>
 vnoremap gcb :action CommentByBlockComment<CR>
 nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
-nnoremap <leader>rf  :action ReformatCode<CR>
-vnoremap <leader>rf  :action ReformatCode<CR>
-nnoremap <leader>lh :action QuickJavaDoc<CR>
+nnoremap <C-A>\  :action ReformatCode<CR>
+vnoremap <C-A>\  :action ReformatCode<CR>
+nnoremap K :action QuickJavaDoc<CR>
 nnoremap <leader>la :action ShowIntentionActions<CR>
-nnoremap <leader>lsw :action GotoSymbol<CR>
+nnoremap gsw :action GotoSymbol<CR>
 
 " Unit test commands
 nnoremap <leader>tt :action ActivateUnitTestsToolWindow<CR>
