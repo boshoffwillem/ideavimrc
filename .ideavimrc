@@ -35,6 +35,16 @@ set idearefactormode=keep
 nnoremap \e :e ~/code/ideavimrc/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 
+# Remap h,j,k,l to be on the home row: j, k, l, ;
+nnoremap j h
+nnoremap k j
+nnoremap l k
+nnoremap ; l
+vnoremap j h
+vnoremap k j
+vnoremap l k
+vnoremap ; l
+
 " File actions
 nnoremap <A-x> :action GotoAction<CR>
 nnoremap <leader>bb :action Switcher<CR>
