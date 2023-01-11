@@ -1,0 +1,30 @@
+set expandtab
+set relativenumber
+set nu
+set nohlsearch
+set visualbell
+set nowrap
+set incsearch
+set scrolloff=8
+let mapleader = " "
+set ignorecase
+set smartcase
+set clipboard^=unnamed,unnamedplus
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m .+1<CR>==
+vnoremap <A-k> :m .-2<CR>==
+vnoremap < <gv
+vnoremap > >gv
+nnoremap Y yg$
+
+nnoremap gcb :vsc Edit.ToggleBlockComment<cr>
+nnoremap gcc :vsc Edit.ToggleLineComment<cr>
+nnoremap gd :vsc Edit.GoToDefinition<CR>
+nnoremap gi :vsc Edit.GoToImplementation<CR>
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+nnoremap ga :vsc Edit.GoToAll<CR>
+nnoremap <leader>lrr :vsc Refactor.Rename<cr>
+nnoremap <leader>lb :vsc Debug.ToggleBreakpoint<cr>
+nnoremap <leader>ta :vsc TestExplorer.RunAllTestsInContext<cr>
