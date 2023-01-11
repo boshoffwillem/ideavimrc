@@ -19,12 +19,27 @@ vnoremap < <gv
 vnoremap > >gv
 nnoremap Y yg$
 
+" local buffer actions
+nnoremap <leader>/ :vsc Edit.Find<cr>
+
+" project actions
+nnoremap <leader>p/ :vsc Edit.FindInFiles<cr>
+nnoremap <leader>pt :vsc Edit.GoToAll<CR>
+
+" LSP actions
 nnoremap gcb :vsc Edit.ToggleBlockComment<cr>
 nnoremap gcc :vsc Edit.ToggleLineComment<cr>
 nnoremap gd :vsc Edit.GoToDefinition<CR>
 nnoremap gi :vsc Edit.GoToImplementation<CR>
 nnoremap gr :vsc Edit.FindAllReferences<CR>
-nnoremap ga :vsc Edit.GoToAll<CR>
-nnoremap <leader>lrr :vsc Refactor.Rename<cr>
+
+" Refactoring actions
+nnoremap <leader>rr :vsc Refactor.Rename<cr>
+nnoremap <leader>ri :vsc Refactor.ExtractInterface<cr>
+nnoremap <leader>rm :vsc Refactor.ExtractMethod<cr>
+
+" Debug actions
 nnoremap <leader>lb :vsc Debug.ToggleBreakpoint<cr>
+
+" Testing actions
 nnoremap <leader>ta :vsc TestExplorer.RunAllTestsInContext<cr>
