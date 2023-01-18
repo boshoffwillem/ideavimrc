@@ -11,13 +11,23 @@ set ignorecase
 set smartcase
 set clipboard^=unnamed,unnamedplus
 
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-vnoremap <A-j> :m .+1<CR>==
-vnoremap <A-k> :m .-2<CR>==
+nnoremap <A-k> :m .+1<CR>==
+nnoremap <A-l> :m .-2<CR>==
+vnoremap <A-k> :m .+1<CR>==
+vnoremap <A-l> :m .-2<CR>==
 vnoremap < <gv
 vnoremap > >gv
 nnoremap Y yg$
+
+" Remap h,j,k,l to be on the home row: j, k, l, ;
+nnoremap j h
+nnoremap k j
+nnoremap l k
+nnoremap ; l
+vnoremap j h
+vnoremap k j
+vnoremap l k
+vnoremap ; l
 
 " local buffer actions
 nnoremap <leader>/ :vsc Edit.Find<cr>
@@ -28,7 +38,9 @@ nnoremap <leader>pt :vsc Edit.GoToAll<CR>
 
 " LSP actions
 nnoremap gcb :vsc Edit.ToggleBlockComment<cr>
+vnoremap gcb :vsc Edit.ToggleBlockComment<cr>
 nnoremap gcc :vsc Edit.ToggleLineComment<cr>
+vnoremap gcc :vsc Edit.ToggleLineComment<cr>
 nnoremap gd :vsc Edit.GoToDefinition<CR>
 nnoremap gi :vsc Edit.GoToImplementation<CR>
 nnoremap gr :vsc Edit.FindAllReferences<CR>
