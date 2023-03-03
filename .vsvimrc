@@ -9,7 +9,7 @@ set scrolloff=8
 let mapleader = " "
 set ignorecase
 set smartcase
-set clipboard^=unnamed,unnamedplus
+set clipboard=unnamed
 
 nnoremap <A-k> :m .+1<CR>==
 nnoremap <A-l> :m .-2<CR>==
@@ -31,6 +31,7 @@ vnoremap ; l
 
 " local buffer actions
 nnoremap <leader>/ :vsc Edit.Find<cr>
+nnoremap <leader>% :vsc Edit.Replace<cr>
 
 " project actions
 nnoremap <leader>p/ :vsc Edit.FindInFiles<cr>
@@ -54,4 +55,5 @@ nnoremap <leader>rm :vsc Refactor.ExtractMethod<cr>
 nnoremap <leader>lb :vsc Debug.ToggleBreakpoint<cr>
 
 " Testing actions
-nnoremap <leader>ta :vsc TestExplorer.RunAllTestsInContext<cr>
+nnoremap <leader>tr :vsc TestExplorer.RunAllTestsInContext<cr>
+nnoremap <leader>td :vsc TestExplorer.DebugAllTestsInContext<cr>
