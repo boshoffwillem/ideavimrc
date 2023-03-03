@@ -24,11 +24,6 @@ nnoremap <A-k> :m .+1<CR>==
 nnoremap <A-l> :m .-2<CR>==
 vnoremap <A-k> :m .+1<CR>==
 vnoremap <A-l> :m .-2<CR>==
-vnoremap < <gv
-vnoremap > >gv
-nnoremap Y yg$
-
-" Remap h,j,k,l to be on the home row: j, k, l, ;
 nnoremap j h
 nnoremap k j
 nnoremap l k
@@ -37,6 +32,9 @@ vnoremap j h
 vnoremap k j
 vnoremap l k
 vnoremap ; l
+vnoremap < <gv
+vnoremap > >gv
+nnoremap Y yg$
 
 let mapleader = " "
 set ideajoin
@@ -51,6 +49,9 @@ nnoremap <leader>bk :action CloseEditor<CR>
 nnoremap <leader>pf :action GotoFile<CR>
 nnoremap <leader>sr :action RecentFiles<CR>
 nnoremap <leader>p/ :action FindInPath<CR>
+nnoremap <leader>/ :action Find<CR>
+nnoremap <leader>% :action Replace<CR>
+nnoremap <leader>p% :action ReplaceInPath<CR>
 
 " Window actions
 nnoremap <C-w>s :action SplitHorizontally<CR>
@@ -70,12 +71,12 @@ nnoremap gr :action FindUsages<CR>
 
 " LSP action commands
 nnoremap <C-Space> :action CodeCompletion<CR>
+nnoremap <leader>e :action ShowErrorDescription<CR>
 nnoremap <leader>lb :action ToggleLineBreakpoint<CR>
 nnoremap gcc :action CommentByLineComment<CR>
 vnoremap gcc :action CommentByLineComment<CR>
 nnoremap gcb :action CommentByBlockComment<CR>
 vnoremap gcb :action CommentByBlockComment<CR>
-nnoremap <leader>lrp :action Refactorings.QuickListPopupAction<CR>
 nnoremap K :action QuickJavaDoc<CR>
 nnoremap <leader>la :action ShowIntentionActions<CR>
 nnoremap <leader>pt :action GotoSymbol<CR>
