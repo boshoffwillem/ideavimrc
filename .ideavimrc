@@ -40,9 +40,6 @@ let mapleader = " "
 set ideajoin
 set idearefactormode=keep
 
-nnoremap \e :e ~/code/ideavimrc/.ideavimrc<CR>
-nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
-
 " File actions
 nnoremap <leader><leader> :action Switcher<CR>
 nnoremap <leader>bk :action CloseEditor<CR>
@@ -80,6 +77,8 @@ vnoremap gcb :action CommentByBlockComment<CR>
 nnoremap K :action QuickJavaDoc<CR>
 nnoremap <leader>la :action ShowIntentionActions<CR>
 nnoremap <leader>pt :action GotoSymbol<CR>
+nnoremap <leader>x :action EvaluateExpression<CR>
+vnoremap <leader>x :action EvaluateExpression<CR>
 
 " Unit test commands
 nnoremap <leader>tt :action ActivateUnitTestsToolWindow<CR>
